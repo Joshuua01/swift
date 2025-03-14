@@ -20,23 +20,34 @@ cd swift-api
 ```
 
 2. Install dependencies:
-   `npm install`
 
-3. Start the PostgreSQL database in Docker
-   `docker-compose up -d postgres`
+   ```
+   npm install
+   ```
+
+3. Start the PostgreSQL database in Docker:
+
+   ```
+   docker-compose up -d postgres
+   ```
 
 4. Start the development server:
-   `npm run dev`
+   ```
+   npm run dev
+   ```
 
 The server will start at http://localhost:8080
 
 ## Building and running the Application Locally
 
 1. Build the project
-   `npm run build`
-
+   ```
+   npm run build
+   ```
 2. Start the application
-   `npm start`
+   ```
+   npm start
+   ```
 
 The server will start at http://localhost:8080
 
@@ -50,7 +61,9 @@ cd swift-api
 ```
 
 2. Build and start the containers
-   `docker-compose up --build`
+   ```
+   docker-compose up --build
+   ```
 
 This will build and start both:
 
@@ -67,7 +80,12 @@ cd swift-api
 ```
 
 2. Install dependencies:
-   `npm install`
+
+   ```
+   npm install
+   ```
 
 3. Run the tests:
-   `npm run test`
+   ```
+   npm run test
+   ```
