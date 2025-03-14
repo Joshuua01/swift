@@ -42,7 +42,14 @@ The server will start at http://localhost:8080
 
 ## Running application with Docker
 
-1. Build and start the containers
+1. Clone the repository:
+
+```
+git clone https://github.com/your-repo/swift-api.git
+cd swift-api
+```
+
+2. Build and start the containers
    `docker-compose up --build`
 
 This will build and start both:
