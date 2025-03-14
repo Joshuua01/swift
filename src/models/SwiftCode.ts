@@ -3,7 +3,7 @@ import { Entity, PrimaryColumn, Column } from "typeorm";
 @Entity()
 export class SwiftCode {
   @PrimaryColumn()
-  swiftCode: number;
+  swiftCode: string;
 
   @Column()
   bankName: string;
@@ -12,7 +12,7 @@ export class SwiftCode {
   address: string;
 
   @Column()
-  contryISO2: string;
+  countryISO2: string;
 
   @Column()
   countryName: string;

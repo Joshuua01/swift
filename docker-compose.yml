@@ -1,4 +1,17 @@
+version: "3.9"
+
 services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      NODE_ENV: production
+      DB_HOST: postgres
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: always
   postgres:
     image: postgres:latest
     container_name: swift_postgres
@@ -12,7 +25,7 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      test: ["CMD-SHELL", "pg_isready -U swift -d swiftdb"]
       interval: 10s
       retries: 5
       timeout: 5s
